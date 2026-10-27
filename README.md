@@ -23,6 +23,7 @@ This project is built using plain HTML, CSS, and JavaScript with no frameworks o
 
 1. Open the project folder in a browser.
 2. Open `小江戸川越ガイド.html` directly in your browser.
+3. Or open https://tvoibratarat.github.io/Kawagoe/
 
 No installation is required because the site uses static files only.
 
