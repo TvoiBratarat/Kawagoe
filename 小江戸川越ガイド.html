@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>小江戸川越ガイド</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav" aria-label="メニュー">
+      <ul>
+        <li><a href="#history">歴史</a></li>
+        <li><a href="#spots">スポット</a></li>
+        <li><a href="#imo">川越芋</a></li>
+        <li><a href="#tech">このサイトの技術</a></li>
+      </ul>
+      <button id="theme" type="button" aria-label="表示テーマを切り替える">ダーク / ライト</button>
+    </nav>
+    <div class="hero-body">
+      <div>
+        <h1>小江戸<br>川越</h1>
+        <p class="lead">黒漆喰の蔵造りの町並みと、時を告げる鐘の音。江戸の面影を残す城下町を歩くためのミニガイドです。</p>
+        <div class="bell" aria-live="polite">
+          <small>時の鐘が次に鳴るのは（日本時間 6・12・15・18時）</small>
+          <strong id="bell-next">--:--:--</strong>
+        </div>
+      </div>
+      <svg class="tower" viewBox="0 0 120 210" role="img" aria-label="時の鐘のシルエット">
+        <g fill="#efece4" opacity=".92">
+          <path d="M60 4 L88 28 H32 Z"/><rect x="42" y="28" width="36" height="30"/>
+          <path d="M60 52 L96 78 H24 Z"/><rect x="38" y="78" width="44" height="34"/>
+          <path d="M60 106 L108 138 H12 Z"/><rect x="30" y="138" width="60" height="58"/>
+        </g>
+        <g fill="#1b1a18"><rect x="52" y="34" width="16" height="18"/><rect x="50" y="86" width="20" height="20"/><rect x="48" y="156" width="24" height="40"/></g>
+        <circle cx="60" cy="43" r="4" fill="#d9a227"/>
+      </svg>
+    </div>
+  </header>
+
+  <main>
+    <section id="history">
+      <div class="wrap">
+        <h2>川越の歴史</h2>
+        <p class="sub">水運と新田開発で栄え、大火のあとに蔵造りの町並みが生まれました。</p>
+        <ol class="tl">
+          <li><b>1638年</b>寛永の大火。のち松平信綱が城下を整備し、1639年に「十ヶ町四門前」の町割を定めます。</li>
+          <li><b>1655年</b>松平信綱の命で野火止用水が開削されます。新河岸川の舟運（高瀬舟）で江戸と結ばれました。</li>
+          <li><b>元禄時代</b>柳沢吉保が三富新田を開拓。落ち葉堆肥でサツマイモ栽培に適した土壌ができました。</li>
+          <li><b>1792年</b>現存する最古の蔵造り、大沢家住宅（寛政4年）が建てられます。</li>
+          <li class="big"><b>1893年</b>川越大火。1,302戸が焼失しましたが、焼け残った蔵造りの耐火性が見直され、商人たちが競って店蔵を再建しました。</li>
+          <li class="big"><b>1894年</b>焼け落ちた時の鐘が再建されます（現在の4代目）。</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="spots" class="spots-section">
+      <div class="wrap">
+        <h2>スポット</h2>
+        <p class="sub">カテゴリを選ぶと表示が切り替わります。</p>
+        <div class="filters" id="filters" role="group" aria-label="カテゴリで絞り込む"></div>
+        <p id="count" role="status"></p>
+        <div class="grid" id="grid"></div>
+      </div>
+    </section>
+
+    <section id="imo" class="imo">
+      <div class="wrap">
+        <p class="quote">栗（九里）より（四里）うまい十三里</p>
+        <p class="sub imo-sub">江戸から十三里（約52km）の川越は、焼き芋ブームを背景にさつまいもの名産地として知られるようになりました。舟運で江戸へ直接運べたことと、関東ローム層と落ち葉堆肥による土づくりが理由です。</p>
+      </div>
+    </section>
+
+    <section id="tech">
+      <div class="wrap">
+        <h2>このサイトの技術</h2>
+        <p class="sub">HTML・CSS・JavaScriptを分けて構成した、読みやすいマルチファイル形式のサイトです。</p>
+        <div class="tech">
+          <div>
+            <h3>HTML</h3>
+            <p>header / main / section など意味のあるタグで構成し、ナビやボタンにはaria属性を付けています。</p>
+          </div>
+          <div>
+            <h3>CSS</h3>
+            <p>カスタムプロパティで配色を管理し、Gridとclampでスマホからパソコンまで対応します。</p>
+          </div>
+          <div>
+            <h3>JavaScript</h3>
+            <p>スポットのデータを配列で持ち、絞り込み表示・時の鐘カウントダウン・テーマ切替を実装しています。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">学校の校外学習資料をもとに作成した学習用サイトです。おせんべい焼き体験：十人十色（川越市元町2-3-17）</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
