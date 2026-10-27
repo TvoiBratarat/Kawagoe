@@ -36,4 +36,3 @@ No installation is required because the site uses static files only.
 ## License
 
 This project is for educational and demonstration purposes.
-# Kawagoe
